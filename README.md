@@ -10,23 +10,6 @@
 
 The aim of this project is to use transfer learning and use a trained neural networks to apply style of an input style image to an input content image. 
 
-## Description
-
-Neural style transfer is an optimization technique used to take two images—a content image and a style reference image (such as an artwork by a famous painter)—and blend them together so the output image looks like the content image, but “painted” in the style of the style reference image. This requires an already trained Neural Network (VGG-19 in this case) and while the output is being generated, the parameters of the Neural Network stays the same but the pixels in the ouput image are changed every iteration.
-[Image Style Transfer Using Convolutional Neural Networks](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf)
-
-We also achieved style transfer using CycleGANs. The beauty of CycleGAN is that X and Y do not have to be paired. This means that we can give CycleGAN any images for X and any images for Y, even if each image in Y is not the direct mapping of the related image in X.
-
-## Tech Stack
-This section contains the technologies we used for this project.
-* [Keras](https://keras.io/)
-* [TensorFlow](https://www.tensorflow.org/)
-* [Python](https://www.python.org/)
-* [Matplotlib](https://matplotlib.org/)
-* [Numpy](https://numpy.org/doc/#)  
-* [Google Colab](https://colab.research.google.com/)
-
-
 ## File Structure
 
     ├── Alex_Net_CIFAR10                   # Folder for Alex_Net Implementation
@@ -204,24 +187,17 @@ A CycleGAN tries to learn a Generator network, which, learns two mappings. Cycle
 - **Training a GAN model** : Its a well known fact that GANs are extremely hard to train. Not having access to high compute resources and training models from scratch required alot of patience and iteration. Google Colab has limits beyond which you have to wait for days to connect to a runtime again. Training locally was the option left. And it was a very time consuming process even for a mere 10 epochs.
 - **Getting access to DGX station** : After realizing its literally impossible to train a cycleGAN consisting of 4 Deep ConvNets on our local machine, we started looking for alternatives. It took us a about a week after alot of arrangements to finally get access to VJTI's DGX A100.  It was a huge boost to our progress and allowed us to train for over 100 epochs in just around 2 days.
 
-# Future Works
-
-We enjoyed working on GANs during our project and plan to continue exploring the field for further applications and make new projects. Some of the points that We think this project can grow or be a base for are listed below.
 
  1. Trying different databases to get an idea of preprocessing different types of images and building models specific to those input image types.
  2. This is a project applied on individual Image to Image translation. Further the model can be used to process black and white sketch video frames to generate colored videos.
 
-
-# Contributors
-* [Labeeb Asari](https://github.com/labeeb-7z)
-* [Lakshaya Singhal](https://github.com/Greyless)
 
 # Acknowledgements and Resources
 * [SRA VJTI](https://www.sravjti.in/) Eklavya 2022  
 * Referred [this](https://www.tensorflow.org/) for understanding the use of tensorflow
 * Completed [these](https://www.coursera.org/specializations/deep-learning) 3 courses for understanding Deep Learning concepts like Convulational Neural networks and learnt to make a DL model
 * Referred [this](https://www.tensorflow.org/tutorials/generative/pix2pix) for understanding code statements
-* Special Thanks to our awesome mentors [Neel Shah](https://github.com/Neel-Shah-29) and [Pratham Shah](https://github.com/shahpratham) who always helped us during our project journey
+
 
 # License
 The [License](LICENSE) goes to the original authors; this information is recreated for personal understanding and educational purposes.
